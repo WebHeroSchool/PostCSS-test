@@ -34,7 +34,11 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
     "gulp-watch": "^5.0.1",
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.11",
+    "postcss-assets": "^5.0.0",
+    "postcss-nested": "^4.1.2",
+    "postcss-preset-env": "^6.6.0",
+    "postcss-short": "^5.0.0"
   },
   "dependencies": {}
 }
