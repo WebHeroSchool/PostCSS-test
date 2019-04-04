@@ -8,7 +8,8 @@ const env = require( 'gulp-env' ),
       nested = require( 'postcss-nested' ),
       short = require( 'postcss-short' ),
       assets = require( 'postcss-assets' ),
-      pressetEnv = require( 'postcss-preset-env' ),
+      postcssPresetEnv = require('postcss-preset-env'),
+      autoprefixer = require( 'autoprefixer' ),
       postcss = require( 'gulp-postcss' ),
       cssnano = require( 'gulp-cssnano' ),
       sourcemaps = require( 'gulp-sourcemaps' ),
@@ -61,7 +62,10 @@ gulp.task( 'build-css', () => {
       loadPaths: ['./images'],
       relativeTo: 'src/styles',
     }),
-    pressetEnv,
+    postcssPresetEnv(/* pluginOptions */),
+    autoprefixer({
+      browsers: ['last 1 version']
+    }),
   ];
 
   return gulp.src( [paths.src.styles] )
